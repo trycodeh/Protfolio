@@ -253,7 +253,15 @@ section .title::after {
     color: crimson;
     background: none;
 }
-
+.about-content:hover{
+    /*padding-left: 20px;
+    border: 2px solid black;
+    border-radius: 5px;*/
+    background-color: #f0eeee;
+    border-radius: 20px;
+    padding-left: 25px;
+    padding-top:5px;
+}
 /* about section styling */
 .about .title::after {
     content: "who i am";
@@ -417,6 +425,45 @@ img {
     margin-top: -10px;
     transition: 200ms;
 }
+    .number-section {
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        width: 80%;
+        height: 180px;
+    }
+
+    .number-container {
+        text-align: center;
+        margin-left: 10cap;
+        margin-right: 10cap;
+        margin-top: 1cap;
+        font-size: large;
+    }
+
+    .number {
+        font-size: 3em;
+        color: #333;
+        margin-bottom: 10px;
+    }
+    .number-section1 {
+        justify-content: center;
+        margin: auto;
+        width: 80%;
+        height: 180px;
+    }
+    .exper{
+        background-color: antiquewhite;
+        padding: 2cap;
+        padding-left: 9%;
+
+    }
+    .exper>span{
+        color: red;
+    }
+    .exper>p{
+        font-size: x-large;
+    }
 /* services section styling */
 .services,
 .teams {
@@ -802,6 +849,27 @@ footer span a:hover {
     .photo {
         text-align: center;
     }
+    .number-section {
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        width: 80%;
+        height: 180px;
+    }
+    
+    .number-container {
+        text-align: center;
+        margin-left: 4cap;
+        margin-right: 4cap;
+        margin-top: 1cap;
+        font-size: large;
+    }
+    
+    .number {
+        font-size: 3em;
+        color: #333;
+        margin-bottom: 10px;
+    }
 
 
 }
@@ -1022,6 +1090,23 @@ footer span a:hover {
         text-align: center;
         background-color: rgb(243, 245, 246);
     }
+    .number-section {
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        width: 80%;
+        height: 180px;
+    }
+    
+    .number-container {
+        text-align: center;
+        margin-left: 2cap;
+        margin-right: 2cap;
+    }
+    .number-section1 {
+        height: 200px;
+    }
+    
 }
 
 @media (max-width: 500px) {
@@ -1113,5 +1198,24 @@ footer span a:hover {
         margin-top: 10px;
         text-align: center;
         background-color: rgb(243, 245, 246);
+    }
+    #Right>img{
+        width: 90%;
+        margin-left: 0;
+        padding-left: 0;
+        margin-top: 15px;
+    }
+    .number-section {
+        display: block;
+        justify-content: center;
+        margin: auto;
+        width: 80%;
+        min-height: 480px;
+    }
+    
+    .number-container {
+        text-align: center;
+        margin-top: 1cap;
+        font-size: large;
     }
 }

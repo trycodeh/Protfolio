@@ -70,3 +70,42 @@ $(document).ready(function(){
         }
     });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const counters = document.querySelectorAll('.number');
+    const speed = 5000; // Adjust this value to control animation speed
+
+    const animateCount = (counter) => {
+        const updateCount = () => {
+            const target = +counter.getAttribute('data-target');
+            const count = +counter.innerText;
+            const increment = target / speed;
+
+            if (count < target) {
+                counter.innerText = Math.ceil(count + increment);
+                setTimeout(updateCount, 200); // Adjust the delay for smoother animation
+            } else {
+                counter.innerText = target;
+            }
+        };
+
+        updateCount();
+    };
+
+    const observerOptions = {
+        threshold: 0.1 // Start animation when 10% of the section is visible
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateCount(entry.target.querySelector('.number'));
+                observer.unobserve(entry.target); // Stop observing after animation starts
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('.number-container').forEach(container => {
+        observer.observe(container);
+    });
+});
